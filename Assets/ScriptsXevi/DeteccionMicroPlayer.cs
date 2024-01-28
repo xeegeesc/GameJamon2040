@@ -25,7 +25,6 @@ public class DeteccionMicroPlayer : MonoBehaviour
     public void MicrofonoToAudio()
     {
         string nombreMicrofono = Microphone.devices[0];
-        Debug.Log("Nombre del microfono: " + nombreMicrofono);
         clipMicrofono = Microphone.Start(nombreMicrofono, true, 20, AudioSettings.outputSampleRate);
     }
 

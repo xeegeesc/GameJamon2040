@@ -20,12 +20,15 @@ public class AccionPorVoz : MonoBehaviour
     void Update()
     {
         float volumen = deteccion.GetVolumenDeMicro() * sensibilidadVolumen;
-        Debug.Log("Volumen detectado: " + volumen);
+        //Debug.Log("Volumen detectado: " + volumen);
 
 
         if (volumen <= umbralVolumen)
         {
             volumen = 0;
+            estadosTortosa.TortosaYaNoTeOye();
+            //Debug.Log("Tortosa ya no te detecta!!!: " + volumen);
+
         }
         else
         {
